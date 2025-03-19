@@ -15,6 +15,23 @@
 
 ---
 
+## Project Structure
+
+my_finance/
+├── lib/
+│   ├── models/              # Data models (e.g., Transaction)
+│   ├── providers/           # State management (FinanceProvider)
+│   ├── screens/             # UI screens (Home, TransactionList, etc.)
+│   ├── services/            # Authentication and backend services
+│   ├── themes/              # App theme (AppTheme with subtle colors)
+│   └── main.dart            # Entry point
+├── test/                    # Unit and widget tests
+├── android/                 # Android-specific files
+├── ios/                     # iOS-specific files
+└── pubspec.yaml             # Dependencies and metadata
+
+---
+
 ## Prerequisites
 Before running the project, ensure you have the following installed:
 
@@ -30,6 +47,35 @@ Before running the project, ensure you have the following installed:
    - Xcode for iOS simulator (macOS only).
 6. **Firebase** :
    - Set up a Firebase project and add the `google-services.json` (Android) or `GoogleService-Info.plist` (iOS) files.
+
+---
+
+## Running Tests
+
+**Prerequisites for Tests**
+
+**Install test dependencies:**
+flutter pub get
+
+**Generate mocks (if not already done):**
+flutter pub run build_runner build
+
+**Run Tests**
+
+All Tests:
+flutter test
+
+**Specific Test:**
+
+Unit test:
+flutter test test/finance_provider_test.dart
+
+Widget test:
+flutter test test/transaction_list_screen_test.dart
+
+**Test Details**
+Unit Test: Verifies FinanceProvider.getTotalIncome correctly sums income transactions.
+Widget Test: Ensures TransactionListScreen displays an empty state and transaction details correctly.
 
 ---
 
