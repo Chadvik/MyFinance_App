@@ -29,23 +29,6 @@ password: 123456
 
 ---
 
-## Project Structure
-
-my_finance/
-├── lib/
-│   ├── models/              # Data models (e.g., Transaction)
-│   ├── providers/           # State management (FinanceProvider)
-│   ├── screens/             # UI screens (Home, TransactionList, etc.)
-│   ├── services/            # Authentication and backend services
-│   ├── themes/              # App theme (AppTheme with subtle colors)
-│   └── main.dart            # Entry point
-├── test/                    # Unit and widget tests
-├── android/                 # Android-specific files
-├── ios/                     # iOS-specific files
-└── pubspec.yaml             # Dependencies and metadata
-
----
-
 ## Prerequisites
 Before running the project, ensure you have the following installed:
 
